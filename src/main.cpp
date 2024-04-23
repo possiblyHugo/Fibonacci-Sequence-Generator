@@ -5,7 +5,6 @@
 #define sqrtOfFive sqrt(5)
 #define goldenRatio (1 + sqrtOfFive) / 2
 
-
 int CalculateFibonacci(int n) {
 	return ((pow(goldenRatio, n)) - (1 - goldenRatio)) / sqrtOfFive;
 }
@@ -21,8 +20,7 @@ std::vector<int> GetSequence(int nthNumber) {
 }
 
 int main() {
-	int nthNumber, result;
-	nthNumber = result = 0;
+	int nthNumber = 0;
 
 	std::cout << "Enter an integer: ";
 	std::cin >> nthNumber;
@@ -31,7 +29,7 @@ int main() {
 	
 	for (int i = 0; i < sequence.size(); i++) {
 		std::cout << sequence[i];
-		if (i == sequence.size() - 1) {
+		if (i == sequence.size() - 1) { // Don't put a comma after the last number
 			continue;
 		}
 		std::cout << ", ";
