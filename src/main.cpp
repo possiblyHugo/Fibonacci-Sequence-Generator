@@ -7,9 +7,7 @@
 
 
 int CalculateFibonacci(int n) {
-	int result = 0; 
-	result = ( (pow(goldenRatio, n)) - (1 - goldenRatio) ) / sqrtOfFive;
-	return result;
+	return ((pow(goldenRatio, n)) - (1 - goldenRatio)) / sqrtOfFive;
 }
 
 std::vector<int> GetSequence(int nthNumber) {
@@ -31,10 +29,13 @@ int main() {
 
 	std::vector<int> sequence = GetSequence(nthNumber);
 	
-	for (auto x : sequence) {
-		std::cout << x << "\n";
+	for (int i = 0; i < sequence.size(); i++) {
+		std::cout << sequence[i];
+		if (i == sequence.size() - 1) {
+			continue;
+		}
+		std::cout << ", ";
 	}
-
 
 	return 0;
 }
